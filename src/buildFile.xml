@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<VASSAL.build.GameModule ModuleOther1="" ModuleOther2="" VassalVersion="3.7.21" description="A Solitaire Wargame by Mike Lambo" name="The Fields of Normandy 2" nextPieceSlotId="85" version="1.0">
+<VASSAL.build.GameModule ModuleOther1="(module by Nicola Marangon)" ModuleOther2="" VassalVersion="3.7.21" description="A Solitaire Wargame by Mike Lambo" name="The Fields of Normandy 2" nextPieceSlotId="93" version="1.0">
     <VASSAL.build.module.BasicCommandEncoder/>
     <VASSAL.build.module.Documentation>
         <VASSAL.build.module.documentation.AboutScreen fileName="TFoN2_splash.png" title="About Module"/>
-        <VASSAL.build.module.documentation.HelpFile fileName="readme.md" fileType="archive" title="Readme" vassalDoc="user"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="module_info.md" fileType="archive" title="Readme" vassalDoc="user"/>
     </VASSAL.build.module.Documentation>
     <VASSAL.build.module.PlayerRoster buttonIcon="" buttonKeyStroke="" buttonText="Retire" buttonToolTip="Switch sides, become an observer, or allow another player to take your side in this game"/>
-    <VASSAL.build.module.GlobalOptions autoReport="Always" chatterHTMLSupport="Never" disablePieceIndexing="false" hotKeysOnClosedWindows="Never" inventoryForAll="Always" minMaxHeap="0" nonOwnerUnmaskable="Never" playerIdFormat="$PlayerName$" promptString="Opponents can unmask my pieces" purgeBlankPropertyPrompts="true" sendToLocationMoveTrails="Never" storeLeadingZeroIntegersAsStrings="false">
+    <VASSAL.build.module.GlobalOptions autoReport="Always" chatterHTMLSupport="Always" disablePieceIndexing="false" hotKeysOnClosedWindows="Never" inventoryForAll="Always" minMaxHeap="0" nonOwnerUnmaskable="Never" playerIdFormat="$PlayerName$" promptString="Opponents can unmask my pieces" purgeBlankPropertyPrompts="true" sendToLocationMoveTrails="Never" storeLeadingZeroIntegersAsStrings="false">
         <option name="newHotKey">87,520</option>
         <option name="endHotKey">87,585</option>
         <option name="stepIcon">/images/StepForward16.gif</option>
@@ -71,14 +71,14 @@
     </VASSAL.build.module.PrototypesContainer>
     <VASSAL.build.module.PieceWindow defaultWidth="0" hidden="false" hotkey="67,520" icon="icon_counters.png" name=" Counters" scale="1.0" text="Counters" tooltip="Show/Hide the counters window">
         <VASSAL.build.widget.TabWidget>
-            <VASSAL.build.widget.ListWidget divider="311" entryName="Standard Counters" height="-67" scale="1.0" width="-5">
-                <VASSAL.build.widget.ListWidget divider="142" entryName="Generic" height="0" scale="1.0" width="0">
-                    <VASSAL.build.widget.PieceSlot entryName="Turn" gpid="22" height="105" width="107">+/null/prototype;Generic	piece;;;Turn.png;Turn/	null;0;0;22;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
-                    <VASSAL.build.widget.PieceSlot entryName="Smoke" gpid="20" height="106" width="107">+/null/prototype;Generic	piece;;;Smoke.png;Smoke/	null;0;0;20;0</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.ListWidget divider="311" entryName="Standard Counters" height="496" scale="1.0" width="960">
+                <VASSAL.build.widget.PanelWidget entryName="Generic" fixed="true" nColumns="3" scale="1.0" vert="false">
                     <VASSAL.build.widget.PieceSlot entryName="Cover" gpid="2" height="107" width="107">+/null/prototype;Generic	piece;;;Cover.png;Cover/	null;0;0;2;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="Mines" gpid="18" height="107" width="107">+/null/prototype;Generic	piece;;;Mines.png;Mines/	null;0;0;18;0</VASSAL.build.widget.PieceSlot>
-                </VASSAL.build.widget.ListWidget>
-                <VASSAL.build.widget.ListWidget divider="196" entryName="Germans" height="0" scale="1.0" width="0">
+                    <VASSAL.build.widget.PieceSlot entryName="Smoke" gpid="20" height="106" width="107">+/null/prototype;Generic	piece;;;Smoke.png;Smoke/	null;0;0;20;0</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Turn" gpid="22" height="105" width="107">+/null/prototype;Generic	piece;;;Turn.png;Turn/	null;0;0;22;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.PanelWidget>
+                <VASSAL.build.widget.PanelWidget entryName="Germans" fixed="true" nColumns="3" scale="1.0" vert="false">
                     <VASSAL.build.widget.PieceSlot entryName="German_Rifles" gpid="7" height="107" width="107">+/null/prototype;German Unit with Facing	piece;;;German_Rifles.png;German_Rifles/	null;0;0;7;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="German_LMG" gpid="6" height="107" width="107">+/null/prototype;German Unit with Facing	piece;;;German_LMG.png;German_LMG/	null;0;0;6;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="German_HMG" gpid="5" height="107" width="106">+/null/prototype;German Unit with Facing	piece;;;German_HMG.png;German_HMG/	null;0;0;5;0</VASSAL.build.widget.PieceSlot>
@@ -86,24 +86,25 @@
                     <VASSAL.build.widget.PieceSlot entryName="German_Halftrack" gpid="4" height="107" width="107">+/null/prototype;German Unit with Facing	piece;;;German_Halftrack.png;German_Halftrack/	null;0;0;4;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="German_Panzer_IV_Tank" gpid="19" height="107" width="106">+/null/prototype;German Unit	piece;;;German_Panzer_IV_Tank.png;German_Panzer_IV_Tank/	null;0;0;19;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="Unknown" gpid="9" height="107" width="107">+/null/prototype;Generic	piece;;;Unkown.png;Unknown/	null;0;0;9;0</VASSAL.build.widget.PieceSlot>
-                </VASSAL.build.widget.ListWidget>
-                <VASSAL.build.widget.ListWidget divider="196" entryName="US" height="0" scale="1.0" width="0">
+                </VASSAL.build.widget.PanelWidget>
+                <VASSAL.build.widget.PanelWidget entryName="US" fixed="true" nColumns="3" scale="1.0" vert="false">
                     <VASSAL.build.widget.PieceSlot entryName="US_Rifles1" gpid="59" height="107" width="107">+/null/prototype;US Unit	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;US_Rifles1.png,US_Rifles1_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Rifles1/	1\	null;0;0;59;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_Rifles2" gpid="60" height="107" width="106">+/null/prototype;US Unit	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;US_Rifles2.png,US_Rifles2_LM.png;Rifles 2,Rifles 2 [LowMorale];true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Rifles2/	1\	null;0;0;60;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_Rifles3" gpid="61" height="107" width="107">+/null/prototype;US Unit	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;US_Rifles3.png,US_Rifles3_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Rifles3/	1\	null;0;0;61;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_Bazooka" gpid="53" height="107" width="106">+/null/emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;US_Bazooka.png,US_Bazooka_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true	prototype;US Unit\	piece;;;;US_Bazooka/1	\	null;0;0;53;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_MG" gpid="57" height="107" width="106">+/null/emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;US_MG.png,US_LMG_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true	prototype;US Unit\	piece;;;;US_MG/1	\	null;0;0;57;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_Mortar" gpid="58" height="107" width="106">+/null/emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;US_Mortar.png,US_Mortar_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true	prototype;US Unit\	piece;;;;US_Mortar/1	\	null;0;0;58;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
-                </VASSAL.build.widget.ListWidget>
+                </VASSAL.build.widget.PanelWidget>
             </VASSAL.build.widget.ListWidget>
-            <VASSAL.build.widget.ListWidget divider="363" entryName="Alternate Counters" height="317" scale="1.0" width="490">
-                <VASSAL.build.widget.ListWidget divider="201" entryName="Generic" height="315" scale="1.0" width="362">
-                    <VASSAL.build.widget.PieceSlot entryName="Turn" gpid="67" height="64" width="75">+/null/prototype;Generic	piece;;;alt_Turn.png;Turn/	null;0;0;67;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
-                    <VASSAL.build.widget.PieceSlot entryName="Smoke" gpid="68" height="64" width="75">+/null/prototype;Generic	piece;;;alt_Smoke.png;Smoke/	null;0;0;68;0</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.ListWidget divider="470" entryName="Alternate Counters" height="466" scale="1.0" width="687">
+                <VASSAL.build.widget.PanelWidget entryName="Generic" fixed="true" nColumns="3" scale="1.0" vert="false">
                     <VASSAL.build.widget.PieceSlot entryName="Cover" gpid="69" height="64" width="75">+/null/prototype;Generic	piece;;;alt_Cover.png;Cover/	null;0;0;69;0</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Low Morale" gpid="86" height="64" width="75">+/null/prototype;Generic	piece;;;alt_Low_Morale.png;Low Morale/	null;0;0;86;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="Mines" gpid="70" height="64" width="75">+/null/prototype;Generic	piece;;;alt_Mines.png;Mines/	null;0;0;70;0</VASSAL.build.widget.PieceSlot>
-                </VASSAL.build.widget.ListWidget>
-                <VASSAL.build.widget.ListWidget divider="196" entryName="Germans" height="315" scale="1.0" width="362">
+                    <VASSAL.build.widget.PieceSlot entryName="Smoke" gpid="68" height="64" width="75">+/null/prototype;Generic	piece;;;alt_Smoke.png;Smoke/	null;0;0;68;0</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Turn" gpid="67" height="64" width="75">+/null/prototype;Generic	piece;;;alt_Turn.png;Turn/	null;0;0;67;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.PanelWidget>
+                <VASSAL.build.widget.PanelWidget entryName="Germans" fixed="true" nColumns="3" scale="1.0" vert="false">
                     <VASSAL.build.widget.PieceSlot entryName="German_Rifles" gpid="71" height="64" width="75">+/null/prototype;German Unit with Facing	piece;;;alt_German_Rifles.png;German_Rifles/	null;0;0;71;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="German_LMG" gpid="72" height="64" width="75">+/null/prototype;German Unit with Facing	piece;;;alt_German_LMG.png;German_LMG/	null;0;0;72;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="German_HMG" gpid="73" height="64" width="75">+/null/prototype;German Unit with Facing	piece;;;alt_German_HMG.png;German_HMG/	null;0;0;73;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
@@ -111,21 +112,24 @@
                     <VASSAL.build.widget.PieceSlot entryName="German_Halftrack" gpid="75" height="64" width="75">+/null/prototype;German Unit with Facing	piece;;;alt_German_Halftrack.png;German_Halftrack/	null;0;0;75;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="German_Panzer_IV_Tank" gpid="76" height="64" width="75">+/null/prototype;German Unit	piece;;;alt_German_Panzer_IV_Tank.png;German_Panzer_IV_Tank/	null;0;0;76;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="Unknown" gpid="77" height="64" width="75">+/null/prototype;Generic	piece;;;alt_German_Flag.png;Unknown/	null;0;0;77;1;ppScale;1.0</VASSAL.build.widget.PieceSlot>
-                </VASSAL.build.widget.ListWidget>
-                <VASSAL.build.widget.ListWidget divider="196" entryName="US" height="315" scale="1.0" width="362">
-                    <VASSAL.build.widget.PieceSlot entryName="US_Rifles1" gpid="78" height="64" width="75">+/null/prototype;US Unit (Alternate)	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;alt_US_Rifles1.png,alt_alt_US_Rifles1_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Rifles1/	1\	null;0;0;78;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.PanelWidget>
+                <VASSAL.build.widget.PanelWidget entryName="US" fixed="true" nColumns="3" scale="1.0" vert="false">
+                    <VASSAL.build.widget.PieceSlot entryName="US_Rifles1" gpid="78" height="64" width="75">+/null/prototype;US Unit (Alternate)	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;alt_US_Rifles1.png,alt_US_Rifles1_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Rifles1/	1\	null;0;0;78;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_Rifles2" gpid="79" height="64" width="75">+/null/prototype;US Unit (Alternate)	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;alt_US_Rifles2.png,alt_US_Rifles2_LM.png;Rifles 2,Rifles 2 [LowMorale];true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Rifles2/	1\	null;0;0;79;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_Rifles3" gpid="80" height="64" width="75">+/null/prototype;US Unit (Alternate)	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;alt_US_Rifles3.png,alt_US_Rifles3_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Rifles3/	1\	null;0;0;80;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_Bazooka" gpid="81" height="64" width="75">+/null/prototype;US Unit (Alternate)	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;alt_US_Bazooka.png,alt_US_Bazooka_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Bazooka/	1\	null;0;0;81;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
-                    <VASSAL.build.widget.PieceSlot entryName="US_MG" gpid="82" height="64" width="75">+/null/prototype;US Unit (Alternate)	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;alt_US_MG.png,alt_US_LMG_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_MG/	1\	null;0;0;82;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="US_MG" gpid="82" height="64" width="75">+/null/prototype;US Unit (Alternate)	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;alt_US_MG.png,alt_US_MG_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_MG/	1\	null;0;0;82;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
                     <VASSAL.build.widget.PieceSlot entryName="US_Mortar" gpid="83" height="64" width="75">+/null/prototype;US Unit (Alternate)	emb2;Activate;128;A;Flip Morale;128;;;128;;;;1;false;0;0;alt_US_Mortar.png,alt_US_Mortar_LM.png;NormalMorale,LowMorale;true;;;;false;;1;1;true;65,130;70,130;;;1.0;;true\	piece;;;;US_Mortar/	1\	null;0;0;83;3;ClickedX;0;ppScale;1.0;ClickedY;0</VASSAL.build.widget.PieceSlot>
-                </VASSAL.build.widget.ListWidget>
+                </VASSAL.build.widget.PanelWidget>
             </VASSAL.build.widget.ListWidget>
         </VASSAL.build.widget.TabWidget>
     </VASSAL.build.module.PieceWindow>
     <VASSAL.build.module.Chatter/>
     <VASSAL.build.module.KeyNamer/>
     <VASSAL.i18n.Language/>
-    <VASSAL.build.module.DiceButton addToTotal="0" canDisable="false" disabledIcon="" hideWhenDisabled="false" hotkey="" icon="/images/die.gif" keepCount="1" keepDice="false" keepOption="&gt;" lockAdd="false" lockDice="false" lockPlus="false" lockSides="false" nDice="2" nSides="6" name="2d6" plus="0" prompt="false" propertyGate="" reportFormat="** $name$ = $result$ *** &amp;lt;$PlayerName$&amp;gt;" reportTotal="false" sortDice="false" text="2d6" tooltip="2d6"/>
-    <VASSAL.build.module.DiceButton addToTotal="0" canDisable="false" disabledIcon="" hideWhenDisabled="false" hotkey="" icon="/images/die.gif" keepCount="1" keepDice="false" keepOption="&gt;" lockAdd="false" lockDice="false" lockPlus="false" lockSides="false" nDice="1" nSides="6" name="1d6" plus="0" prompt="false" propertyGate="" reportFormat="** $name$ = $result$ *** &amp;lt;$PlayerName$&amp;gt;" reportTotal="false" sortDice="false" text="1d6" tooltip="1d6"/>
+    <VASSAL.build.module.DiceButton addToTotal="0" canDisable="false" disabledIcon="" hideWhenDisabled="false" hotkey="" icon="/images/die.gif" keepCount="1" keepDice="false" keepOption="&gt;" lockAdd="false" lockDice="false" lockPlus="false" lockSides="false" nDice="2" nSides="6" name="2d6" plus="0" prompt="false" propertyGate="" reportFormat="** $name$ = $result$ *** &amp;lt;$PlayerName$&amp;gt;" reportTotal="false" sortDice="false" text="2d6" tooltip="One button to rule them all"/>
+    <VASSAL.build.module.DiceButton addToTotal="0" canDisable="false" disabledIcon="" hideWhenDisabled="false" hotkey="" icon="/images/die.gif" keepCount="1" keepDice="false" keepOption="&gt;" lockAdd="false" lockDice="false" lockPlus="false" lockSides="false" nDice="2" nSides="6" name="[US Activation]" plus="0" prompt="false" propertyGate="" reportFormat="&lt;b&gt;&lt;span style=&quot;color:green;&quot;&gt;** $name$= &lt;img src=&quot;d6_$result1$_green.png&quot; width=18 height=18&gt; &lt;img src=&quot;d6_$result2$_green.png&quot; width=18 height=18&gt;&lt;/span&gt; ($result$) ***&lt;/b&gt; " reportTotal="false" sortDice="false" text="US Activation" tooltip="Roll for US Activation"/>
+    <VASSAL.build.module.DiceButton addToTotal="0" canDisable="false" disabledIcon="" hideWhenDisabled="false" hotkey="" icon="/images/die.gif" keepCount="1" keepDice="false" keepOption="&gt;" lockAdd="false" lockDice="false" lockPlus="false" lockSides="false" nDice="2" nSides="6" name="[German Unit]" plus="0" prompt="false" propertyGate="" reportFormat="&lt;b&gt;&lt;span style=&quot;color:blue;&quot;&gt;** $name$= &lt;img src=&quot;d6_$result1$_blue.png&quot; width=18 height=18&gt; &lt;img src=&quot;d6_$result2$_blue.png&quot; width=18 height=18&gt;&lt;/span&gt; ($result$) ***&lt;/b&gt; " reportTotal="false" sortDice="false" text="German Unit" tooltip="Roll on the German Unit Chart"/>
+    <VASSAL.build.module.DiceButton addToTotal="0" canDisable="false" disabledIcon="" hideWhenDisabled="false" hotkey="" icon="/images/die.gif" keepCount="1" keepDice="false" keepOption="&gt;" lockAdd="false" lockDice="false" lockPlus="false" lockSides="false" nDice="2" nSides="6" name="[Fire]" plus="0" prompt="false" propertyGate="" reportFormat="&lt;b&gt;&lt;span style=&quot;color:red;&quot;&gt;** $name$= &lt;img src=&quot;d6_$result1$_red.png&quot; width=18 height=18&gt; &lt;img src=&quot;d6_$result2$_red.png&quot; width=18 height=18&gt;&lt;/span&gt; ($result$) ***&lt;/b&gt; " reportTotal="false" sortDice="false" text="Fire" tooltip="Roll for Fire effect"/>
+    <VASSAL.build.module.DiceButton addToTotal="0" canDisable="false" disabledIcon="" hideWhenDisabled="false" hotkey="" icon="/images/die.gif" keepCount="1" keepDice="false" keepOption="&gt;" lockAdd="false" lockDice="false" lockPlus="false" lockSides="false" nDice="1" nSides="6" name="1d6" plus="0" prompt="false" propertyGate="" reportFormat="** $name$ = $result$ *** &amp;lt;$PlayerName$&amp;gt;" reportTotal="false" sortDice="false" text="1d6" tooltip="One die at a time.. but why? :-)"/>
 </VASSAL.build.GameModule>
